@@ -19,7 +19,7 @@
 #include <string>
 
 #include "rosidl_generator_cpp/msg/primitives_default.hpp"
-#include "rosidl_generator_cpp/msg/primitives_static.hpp"
+#include "rosidl_generator_cpp/msg/primitives_unset.hpp"
 #include "rosidl_generator_cpp/msg/various.hpp"
 
 template<typename Callable>
@@ -62,7 +62,7 @@ TEST(Test_msg_initialization, no_arg_constructor) {
   ASSERT_EQ(50000000ULL, primitives_def.uint64_value);
   ASSERT_EQ("bar", primitives_def.string_value);
 
-  rosidl_generator_cpp::msg::PrimitivesStatic primitives_static;
+  rosidl_generator_cpp::msg::PrimitivesUnset primitives_static;
   ASSERT_FALSE(primitives_static.bool_value);
   ASSERT_EQ(0, primitives_static.byte_value);
   ASSERT_EQ(0, primitives_static.char_value);

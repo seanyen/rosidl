@@ -28,13 +28,12 @@ if(BUILD_TESTING)
 
     "msg/FieldsWithSameTypeSomeDefaults.msg"
 
-    "msg/PrimitiveStaticArrays.msg"
-
     "msg/PrimitivesBounded.msg"
     "msg/PrimitivesConstants.msg"
     "msg/PrimitivesDefault.msg"
     "msg/PrimitivesStatic.msg"
     "msg/PrimitivesUnbounded.msg"
+    "msg/PrimitivesUnset.msg"
 
     "msg/StaticArrayBounded.msg"
     "msg/StaticArrayStatic.msg"
