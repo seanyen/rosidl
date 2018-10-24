@@ -77,7 +77,7 @@ if(BUILD_TESTING)
     ${message_files}
     ${srv_files}
     ADD_LINTER_TESTS
-    SKIP_INSTALL
+    # SKIP_INSTALL
   )
 
   include_directories(include
