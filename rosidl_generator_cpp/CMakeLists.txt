@@ -15,6 +15,15 @@ ament_index_register_resource("rosidl_runtime_packages")
 ament_python_install_package(${PROJECT_NAME})
 
 if(BUILD_TESTING)
+  # Default to C++14
+  if(NOT CMAKE_CXX_STANDARD)
+    set(CMAKE_CXX_STANDARD 14)
+  endif()
+
+  if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    add_compile_options(-Wall -Wextra -Wpedantic)
+  endif()
+
   find_package(ament_lint_auto REQUIRED)
   find_package(rosidl_generator_c REQUIRED)
   ament_lint_auto_find_test_dependencies()
@@ -70,15 +79,6 @@ if(BUILD_TESTING)
     ADD_LINTER_TESTS
     SKIP_INSTALL
   )
-
-  # Default to C++14
-  if(NOT CMAKE_CXX_STANDARD)
-    set(CMAKE_CXX_STANDARD 14)
-  endif()
-
-  if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    add_compile_options(-Wall -Wextra -Wpedantic)
-  endif()
 
   include_directories(include
     ${rosidl_generator_c_INCLUDE_DIRS})
