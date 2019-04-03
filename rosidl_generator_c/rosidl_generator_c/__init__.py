@@ -29,6 +29,7 @@ def generate_c(generator_arguments_file):
         'idl.h.em': '%s.h',
         'idl__functions.c.em': '%s__functions.c',
         'idl__functions.h.em': '%s__functions.h',
+        'idl__bounds.h.em': '%s__bounds.h',
         'idl__struct.h.em': '%s__struct.h',
         'idl__type_support.h.em': '%s__type_support.h',
     }
