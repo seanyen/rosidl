@@ -33,6 +33,7 @@ extern "C"
 #include <stdint.h>
 
 #include "rosidl_generator_c/visibility_control.h"
+#include "rosidl_generator_c/string_bounds.h"
 #include "@(package_name)/msg/rosidl_generator_c__visibility_control.h"
 
 #include "@(include_base)__bounds.h"

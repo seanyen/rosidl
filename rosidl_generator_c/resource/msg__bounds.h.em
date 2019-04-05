@@ -67,8 +67,8 @@ typedef struct @(message_typename)__bounds
 @[  elif isinstance(member.type.basetype, BasicType)]@
   size_t @(member.name)__length;
 @[  else]@
-  size_t @(member.name)__length;
-  @('%s__bounds' % (message_typename)) @(member.name)__bounds;
+//  size_t @(member.name)__length;
+//  @('%s__bounds' % (member.type)) @(member.name)__bounds;
 @[  end if]@
 @[ end if]@
 @[end for]@
