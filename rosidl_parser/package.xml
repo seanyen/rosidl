@@ -17,6 +17,8 @@
   <test_depend>ament_lint_common</test_depend>
   <test_depend>python3-pytest</test_depend>
 
+  <build_export_depend>python3-lark-parser</build_export_depend>
+
   <export>
     <build_type>ament_cmake</build_type>
   </export>
